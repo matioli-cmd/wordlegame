@@ -355,6 +355,8 @@ body {
     border-radius: 10px;
     justify-content: center;
     visibility: hidden;
+    opacity: 0; 
+    transition: opacity 0.3s ease;
 }
 
 #endmessage{
@@ -506,4 +508,3 @@ body {
         font-size: 1.1rem;
     }
 }
-
