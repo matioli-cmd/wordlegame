@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html id="background">
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Wordle</title>
         <link rel="stylesheet" href="style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
 
@@ -25,7 +25,6 @@
             </div>
             <div id="mode-container2">
                 <p id="contrast">Contrast Mode</p>
-                <div id="line2"></div>
                 <button id="enablecontrast">Enable</button>
                 
          </div>
@@ -35,6 +34,12 @@
 
         <div id="error">
             <h1 id="errormessage"></h1>
+        </div>
+
+        <div id="end">
+            <h1 id="endmessage">GOOD TRY!</h1>
+            <h1 id="wordmessage">agony</h1>
+            <button id="playagain">PLAY AGAIN</button>
         </div>
 
         <div class="grid">
@@ -95,48 +100,48 @@
         <div class="grid2">
             <div id='first' class="row2">
                 
-                <button id="q" onclick=keyboard(id)>Q</button>
-                <button id="w" onclick=keyboard(id)>W</button>
-                <button id="e" onclick=keyboard(id)>E</button>
-                <button id="r" onclick=keyboard(id)>R</button>
-                <button id="t" onclick=keyboard(id)>T</button>
-                <button id="y" onclick=keyboard(id)>Y</button>
-                <button id="u" onclick=keyboard(id)>U</button>
-                <button id="i" onclick=keyboard(id)>I</button>
-                <button id="o" onclick=keyboard(id)>O</button>
-                <button id="p" onclick=keyboard(id)>P</button>
+                <button id="q" onclick=keyboard(id)>q</button>
+                <button id="w" onclick=keyboard(id)>w</button>
+                <button id="e" onclick=keyboard(id)>e</button>
+                <button id="r" onclick=keyboard(id)>r</button>
+                <button id="t" onclick=keyboard(id)>t</button>
+                <button id="y" onclick=keyboard(id)>y</button>
+                <button id="u" onclick=keyboard(id)>u</button>
+                <button id="i" onclick=keyboard(id)>i</button>
+                <button id="o" onclick=keyboard(id)>o</button>
+                <button id="p" onclick=keyboard(id)>p</button>
 
             </div>
      
             <div id='second' class="row2">
                
-                <button id="a" onclick=keyboard(id)>A</button>
-                <button id="s" onclick=keyboard(id)>S</button>
-                <button id="d" onclick=keyboard(id)>D</button>
-                <button id="f" onclick=keyboard(id)>F</button>
-                <button id="g" onclick=keyboard(id)>G</button>
-                <button id="h" onclick=keyboard(id)>H</button>
-                <button id="j" onclick=keyboard(id)>J</button>
-                <button id="k" onclick=keyboard(id)>K</button>
-                <button id="l" onclick=keyboard(id)>L</button>
+                <button id="a" onclick=keyboard(id)>a</button>
+                <button id="s" onclick=keyboard(id)>s</button>
+                <button id="d" onclick=keyboard(id)>d</button>
+                <button id="f" onclick=keyboard(id)>f</button>
+                <button id="g" onclick=keyboard(id)>g</button>
+                <button id="h" onclick=keyboard(id)>h</button>
+                <button id="j" onclick=keyboard(id)>j</button>
+                <button id="k" onclick=keyboard(id)>k</button>
+                <button id="l" onclick=keyboard(id)>l</button>
 
             </div>
             <div id='third' class="row2">
                 
                 <button id="enter" onclick=keyboard(id)><img id='enterimage' src="enterdark.png" alt="Enter" width="50px"></button>
-                <button id="z" onclick=keyboard(id)>Z</button>
-                <button id="x" onclick=keyboard(id)>X</button>
-                <button id="c" onclick=keyboard(id)>C</button>
-                <button id="v" onclick=keyboard(id)>V</button>
-                <button id="b" onclick=keyboard(id)>B</button>
-                <button id="n" onclick=keyboard(id)>N</button>
-                <button id="m" onclick=keyboard(id)>M</button>
+                <button id="z" onclick=keyboard(id)>z</button>
+                <button id="x" onclick=keyboard(id)>x</button>
+                <button id="c" onclick=keyboard(id)>c</button>
+                <button id="v" onclick=keyboard(id)>v</button>
+                <button id="b" onclick=keyboard(id)>b</button>
+                <button id="n" onclick=keyboard(id)>n</button>
+                <button id="m" onclick=keyboard(id)>m</button>
                 <button id="backspace" onclick=keyboard(id)><img id='backspaceimage'src="backspacedark.png" width="30px" ></button>
 
             </div>
             
         </div>
 
-        <script src="file.js"></script>
+        <script src="main.js"></script>
     </body>
 </html>
