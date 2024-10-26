@@ -637,8 +637,6 @@ function CurrentRow(){
 
 CurrentRow()
 
-console.log(word)
-
 function keyboard(id){
 
     if(!rows_completed.includes(row) && valid_rows.includes(row) && SettingsOpened != 'Y' && listening == true){
