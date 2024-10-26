@@ -197,7 +197,6 @@ let wordleWords = [
     "zitis", "zloty", "zoeae", "zoeal", "zombi", "zonae", "zoned", "zoner", "zowie"
       
       ]
-
 wordleWords = wordleWords.filter(word => word.length == 5);
 
 // END MESSAGE //
@@ -483,7 +482,7 @@ settings_button.onclick = function(){
         wordmessage.style.color = 'white'
         wordmessage.style.backgroundColor = 'black'
         endmessage.style.color = 'black'
-        enddiv.style.backgroundColor = 'rgb(190, 190, 190)'
+        enddiv.style.backgroundColor = 'rgb(185, 185, 185)'
 
     }
 
@@ -642,7 +641,6 @@ console.log(word)
 
 function keyboard(id){
 
-
     if(!rows_completed.includes(row) && valid_rows.includes(row) && SettingsOpened != 'Y' && listening == true){
     if(mode == 'lightmode'){
         current.forEach(box => {
@@ -734,6 +732,7 @@ function keyboard(id){
             
             if(count == 5){
                 enddiv.style.visibility = 'visible'
+                enddiv.style.opacity = '1'
                 endmessage.textContent = 'GOOD JOB'
                 wordmessage.textContent = word
                 return
@@ -744,6 +743,7 @@ function keyboard(id){
                 CurrentRow()
                 if(row == 6){
                     enddiv.style.visibility = 'visible'
+                    enddiv.style.opacity = '1'
                     endmessage.textContent = 'GOOD TRY'
                     wordmessage.textContent = word
                    
@@ -889,6 +889,7 @@ document.addEventListener("keydown", event => {
                     
                     if(count == 5){
                         enddiv.style.visibility = 'visible'
+                        enddiv.style.opacity = '1'
                         endmessage.textContent = 'GOOD JOB'
                         wordmessage.textContent = word
                         return
@@ -899,6 +900,7 @@ document.addEventListener("keydown", event => {
                         CurrentRow()
                         if(row == 6){
                             enddiv.style.visibility = 'visible'
+                            enddiv.style.opacity = '1'
                             endmessage.textContent = 'GOOD TRY'
                             wordmessage.textContent = word
                            
