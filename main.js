@@ -198,6 +198,8 @@ let wordleWords = [
       
       ]
 
+wordleWords = wordleWords.filter(word => word.length == 5);
+
 // END MESSAGE //
 
 let wordmessage = document.getElementById("wordmessage")
