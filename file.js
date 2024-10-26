@@ -325,6 +325,8 @@ settings_button.onclick = function(){
         contrast_button.onclick = function(){
             if(contrast_button.textContent == 'Disable'){
 
+                keys = document.querySelectorAll('.row2 button')
+
                 // SWITCH COLORS //
     
                 contrast_button.textContent = 'Enable'
@@ -351,6 +353,14 @@ settings_button.onclick = function(){
                     }
                     else if(box.style.backgroundColor == inside){
                         box.style.backgroundColor = original_yellow
+                    }
+                })
+                keys.forEach(key => {
+                    if(key.style.backgroundColor == correct){
+                        key.style.backgroundColor = original_green
+                    }
+                    else if(key.style.backgroundColor == inside){
+                        key.style.backgroundColor = original_yellow
                     }
                 })
                 correct = original_green
