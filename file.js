@@ -197,7 +197,17 @@ let wordleWords = [
     "zitis", "zloty", "zoeae", "zoeal", "zombi", "zonae", "zoned", "zoner", "zowie"
       
       ]
-  
+
+// END MESSAGE //
+
+let wordmessage = document.getElementById("wordmessage")
+let endmessage = document.getElementById("endmessage")
+let enddiv = document.getElementById("end")
+let playagain = document.getElementById("playagain")
+
+playagain.onclick = function(){
+    location.reload()
+}
 
 // OTHER VARIABLES // 
 
@@ -468,7 +478,10 @@ settings_button.onclick = function(){
         })
         document.getElementById("enterimage").src = 'enterlight.png'
         document.getElementById("backspaceimage").src = 'backspacelight.png'
-        console.log(errorMessage)
+        wordmessage.style.color = 'white'
+        wordmessage.style.backgroundColor = 'black'
+        endmessage.style.color = 'black'
+        enddiv.style.backgroundColor = 'rgb(190, 190, 190)'
 
     }
 
@@ -493,6 +506,10 @@ settings_button.onclick = function(){
         })
         document.getElementById("enterimage").src = 'enterdark.png'
         document.getElementById("backspaceimage").src = 'backspacedark.png'
+        wordmessage.style.color = 'black'
+        wordmessage.style.backgroundColor = 'white'
+        endmessage.style.color = 'white'
+        enddiv.style.backgroundColor = 'rgb(32, 31, 31)'
 
     }
 
@@ -714,12 +731,21 @@ function keyboard(id){
                    
             
             if(count == 5){
+                enddiv.style.visibility = 'visible'
+                endmessage.textContent = 'GOOD JOB'
+                wordmessage.textContent = word
                 return
             }
             else{
                 index = 0
                 row += 1
                 CurrentRow()
+                if(row == 6){
+                    enddiv.style.visibility = 'visible'
+                    endmessage.textContent = 'GOOD TRY'
+                    wordmessage.textContent = word
+                   
+                }
 
             
             }  
@@ -860,16 +886,26 @@ document.addEventListener("keydown", event => {
                            
                     
                     if(count == 5){
+                        enddiv.style.visibility = 'visible'
+                        endmessage.textContent = 'GOOD JOB'
+                        wordmessage.textContent = word
                         return
                     }
                     else{
                         index = 0
                         row += 1
                         CurrentRow()
+                        if(row == 6){
+                            enddiv.style.visibility = 'visible'
+                            endmessage.textContent = 'GOOD TRY'
+                            wordmessage.textContent = word
+                           
+                        }
 
                     
                     }  
                     }
+                    
                     else{
                         
                         listening = false
@@ -910,7 +946,6 @@ document.addEventListener("keydown", event => {
         }
             
     }
-
 })
 
 
