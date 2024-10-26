@@ -731,10 +731,11 @@ function keyboard(id){
                    
             
             if(count == 5){
-                enddiv.style.visibility = 'visible'
-                enddiv.style.opacity = '1'
-                endmessage.textContent = 'GOOD JOB'
-                wordmessage.textContent = word
+                setTimeout(() => {
+                    enddiv.style.visibility = 'visible'
+                    enddiv.style.opacity = '1'
+                    endmessage.textContent = 'GOOD JOB'
+                    wordmessage.textContent = word}, 1000)
                 return
             }
             else{
@@ -742,11 +743,12 @@ function keyboard(id){
                 row += 1
                 CurrentRow()
                 if(row == 6){
-                    enddiv.style.visibility = 'visible'
-                    enddiv.style.opacity = '1'
-                    endmessage.textContent = 'GOOD TRY'
-                    wordmessage.textContent = word
-                   
+                    setTimeout(() => {
+                        enddiv.style.visibility = 'visible'
+                        enddiv.style.opacity = '1'
+                        endmessage.textContent = 'GOOD TRY'
+                        wordmessage.textContent = word}, 1000)
+                   return
                 }
 
             
@@ -888,21 +890,25 @@ document.addEventListener("keydown", event => {
                            
                     
                     if(count == 5){
-                        enddiv.style.visibility = 'visible'
-                        enddiv.style.opacity = '1'
-                        endmessage.textContent = 'GOOD JOB'
-                        wordmessage.textContent = word
-                        return
+                        setTimeout(() => {
+                            enddiv.style.visibility = 'visible'
+                            enddiv.style.opacity = '1'
+                            endmessage.textContent = 'GOOD JOB'
+                            wordmessage.textContent = word}, 1000)
+                            return
                     }
                     else{
                         index = 0
                         row += 1
                         CurrentRow()
                         if(row == 6){
-                            enddiv.style.visibility = 'visible'
-                            enddiv.style.opacity = '1'
-                            endmessage.textContent = 'GOOD TRY'
-                            wordmessage.textContent = word
+                            setTimeout(() => {
+                                enddiv.style.visibility = 'visible'
+                                enddiv.style.opacity = '1'
+                                endmessage.textContent = 'GOOD TRY'
+                                wordmessage.textContent = word}, 1000)
+                                return
+                            
                            
                         }
 
