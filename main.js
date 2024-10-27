@@ -271,7 +271,7 @@ settings_button.onclick = function(){
     else{
         light_image.style.visibility = 'hidden'
     }
-    errorMessage.textContent = ''
+    errorMessage.style.opacity = 0
     
     close_button.onclick = function(){
         settings_button.style.visibility = 'visible'
@@ -557,61 +557,6 @@ let rows_completed = []
 let words_guessed = []
 const valid_rows = [0,1,2,3,4,5]
 
-function incomplete(){
-    
-    current[0].style.borderColor = 'rgb(205, 71, 71)'
-    current[1].style.borderColor = 'rgb(205, 71, 71)'
-    current[2].style.borderColor = 'rgb(205, 71, 71)'
-    current[3].style.borderColor = 'rgb(205, 71, 71)'
-    current[4].style.borderColor = 'rgb(205, 71, 71)'
-
-    if(mode == 'darkmode'){
-        setTimeout(() => {
-
-            current[0].style.borderColor = 'rgb(68, 66, 66)'
-            current[1].style.borderColor = 'rgb(68, 66, 66)'
-            current[2].style.borderColor = 'rgb(68, 66, 66)'
-            current[3].style.borderColor = 'rgb(68, 66, 66)'
-            current[4].style.borderColor = 'rgb(68, 66, 66)'
-        }, 700)
-    }
-    else{
-        setTimeout(() => {
-
-            current[0].style.borderColor = 'rgb(165, 165, 165)'
-            current[1].style.borderColor = 'rgb(165, 165, 165)'
-            current[2].style.borderColor = 'rgb(165, 165, 165)'
-            current[3].style.borderColor = 'rgb(165, 165, 165)'
-            current[4].style.borderColor = 'rgb(165, 165, 165)'
-        }, 700)
-    }
-   
-
-}
-
-function resetColor(){
-
-    if(mode == 'darkmode'){
-
-        current[0].style.borderColor = 'rgb(68, 66, 66)'
-        current[1].style.borderColor = 'rgb(68, 66, 66)'
-        current[2].style.borderColor = 'rgb(68, 66, 66)'
-        current[3].style.borderColor = 'rgb(68, 66, 66)'
-        current[4].style.borderColor = 'rgb(68, 66, 66)'
-
-    }
-    else{  
-
-        current[0].style.borderColor = 'rgb(165, 165, 165)'
-        current[1].style.borderColor = 'rgb(165, 165, 165)'
-        current[2].style.borderColor = 'rgb(165, 165, 165)'
-        current[3].style.borderColor = 'rgb(165, 165, 165)'
-        current[4].style.borderColor = 'rgb(165, 165, 165)'
-
-
-    }
-        
-}
 
 function CurrentRow(){
     
@@ -636,6 +581,8 @@ function CurrentRow(){
 }
 
 CurrentRow()
+
+console.log(word)
 
 function keyboard(id){
 
@@ -667,7 +614,6 @@ function keyboard(id){
 
             if(wordleWords.includes(guess)){
 
-            resetColor()
             rows_completed.push(row)
             const counts = {};
             let count = 0
@@ -761,8 +707,6 @@ function keyboard(id){
                 errorMessage.style.opacity = 1
                 
                 setTimeout(hideErrorMessage,700)
-
-                incomplete()  
             }
         
            
@@ -776,9 +720,7 @@ function keyboard(id){
             
             errorMessage.style.opacity = 1
             
-            setTimeout(hideErrorMessage,700)
-
-            incomplete()  
+            setTimeout(hideErrorMessage,700) 
                           
         }
     }  
@@ -824,8 +766,7 @@ document.addEventListener("keydown", event => {
                     }
 
                     if(wordleWords.includes(guess)){
-
-                    resetColor()
+                        
                     rows_completed.push(row)
                     const counts = {};
                     let count = 0
@@ -923,8 +864,6 @@ document.addEventListener("keydown", event => {
                         errorMessage.style.opacity = 1
                         
                         setTimeout(hideErrorMessage,700)
-
-                        incomplete()  
                     }
                 
                    
@@ -939,8 +878,6 @@ document.addEventListener("keydown", event => {
                     errorMessage.style.opacity = 1
                     
                     setTimeout(hideErrorMessage,700)
-
-                    incomplete()  
                                   
                 }
             }  
