@@ -221,6 +221,7 @@ let contrast_yellow = 'rgb(33, 146, 191)'
 let correct = 'rgb(67, 173, 61)'
 let inside = 'rgb(235, 206, 65)'
 let none = 'rgb(67, 67, 66)'
+let keyboardnone = 'rgb(36, 36, 36)'
 
 // ROWS //
 
@@ -469,13 +470,17 @@ settings_button.onclick = function(){
         errorMessage.style.padding = '10px'
         keys = document.querySelectorAll('.row2 button')
         keys.forEach(key => {
-            if(key.style.backgroundColor != correct && key.style.backgroundColor != inside){
+            if(key.style.backgroundColor == correct || key.style.backgroundColor == inside || key.style.backgroundColor == keyboardnone){
+                if(key.style.backgroundColor == keyboardnone){
+                    key.style.backgroundColor = none
+                }
+                key.style.color = 'white'
+            }
+            else if(key.style.backgroundColor != correct && key.style.backgroundColor != inside && key.style.backgroundColor != keyboardnone){
                 key.style.backgroundColor = 'rgb(210, 210, 210)'
                 key.style.color = 'black'
             }
-            else if(key.style.backgroundColor == correct || key.style.backgroundColor == inside){
-                key.style.color = 'white'
-            }
+
         })
         document.getElementById("enterimage").src = 'enterlight.png'
         document.getElementById("backspaceimage").src = 'backspacelight.png'
@@ -500,7 +505,10 @@ settings_button.onclick = function(){
         errorMessage.style.color = 'black'
         keys = document.querySelectorAll('.row2 button')
         keys.forEach(key => {
-            if(key.style.backgroundColor != correct && key.style.backgroundColor != inside){
+            if(key.style.backgroundColor == none){
+                key.style.backgroundColor = keyboardnone
+            }
+            if(key.style.backgroundColor != correct && key.style.backgroundColor != inside && key.style.backgroundColor != keyboardnone){
                 key.style.backgroundColor = 'rgb(68, 66, 66)'
             }
             key.style.color = 'white'
@@ -655,9 +663,21 @@ function keyboard(id){
           
             // Gray Letters
             
-           for(let i = 0; i < guess.length; i++){
+           for(let i = 0; i < guess.length; i++){  
 
+                    key = document.getElementById(current[i].textContent)
                     if(current[i].style.backgroundColor != correct && current[i].style.backgroundColor != inside){
+                        if(key.style.backgroundColor != correct && key.style.background != inside){
+                            if(mode == 'lightmode'){
+                                key.style.backgroundColor = none
+                                key.style.color = 'white'
+                            }
+                            else if(mode == 'darkmode'){
+                                key.style.backgroundColor = keyboardnone
+                                key.style.color = 'white'
+                            }
+
+                        }
                         current[i].style.backgroundColor = none
                         current[i].style.border = 'hidden'
                     }
@@ -766,7 +786,7 @@ document.addEventListener("keydown", event => {
                     }
 
                     if(wordleWords.includes(guess)){
-                        
+
                     rows_completed.push(row)
                     const counts = {};
                     let count = 0
@@ -812,6 +832,18 @@ document.addEventListener("keydown", event => {
                    for(let i = 0; i < guess.length; i++){
 
                             if(current[i].style.backgroundColor != correct && current[i].style.backgroundColor != inside){
+                                key = document.getElementById(current[i].textContent)
+                                if(key.style.backgroundColor != correct && key.style.background != inside){
+                                    if(mode == 'lightmode'){
+                                        key.style.backgroundColor = none
+                                        key.style.color = 'white'
+                                    }
+                                    else if(mode == 'darkmode'){
+                                        key.style.backgroundColor = keyboardnone
+                                        key.style.color = 'white'
+                                    }
+
+                                }
                                 current[i].style.backgroundColor = none
                                 current[i].style.border = 'hidden'
                             }
