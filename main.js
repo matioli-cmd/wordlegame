@@ -667,7 +667,7 @@ function keyboard(id){
 
                     key = document.getElementById(current[i].textContent)
                     if(current[i].style.backgroundColor != correct && current[i].style.backgroundColor != inside){
-                        if(key.style.backgroundColor != correct && key.style.background != inside){
+                        if(key.style.backgroundColor != correct && key.style.backgroundColor != inside){
                             if(mode == 'lightmode'){
                                 key.style.backgroundColor = none
                                 key.style.color = 'white'
@@ -833,7 +833,7 @@ document.addEventListener("keydown", event => {
 
                             if(current[i].style.backgroundColor != correct && current[i].style.backgroundColor != inside){
                                 key = document.getElementById(current[i].textContent)
-                                if(key.style.backgroundColor != correct && key.style.background != inside){
+                                if(key.style.backgroundColor != correct && key.style.backgroundColor != inside){
                                     if(mode == 'lightmode'){
                                         key.style.backgroundColor = none
                                         key.style.color = 'white'
