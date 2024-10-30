@@ -405,3 +405,106 @@ body {
     background-color: rgba(127, 51, 28, 0.91);
 
 }
+
+@media (max-width: 480px) {
+
+    #end{
+        height: 50px;
+        width: 50px;
+    }
+    #endmessage{
+        font-size: 40px;
+        width: 300px;
+        left: -128px;
+    }
+    #wordmessage{
+        font-size: 30px;
+        width: 120px;
+        left: -45px;
+    }
+    #playagain{
+        top: -120px;
+        left: -125px;
+    }
+    .grid2 {
+        transform: scale(0.6);
+        top: 380px;
+        max-width: 100vw;
+        right: 75px;
+    }
+    .grid1{
+        transform: scale(0.6);
+        top: 20px;
+        max-width: 100vw;
+    }
+    
+    .row h1, .row2 button {
+        width: 50px;
+        height: 50px;
+        font-size: 1.8rem;
+    }
+
+    .row2 button{
+        width: 50px;
+        height: 90px;
+        font-size: 2rem;
+    }
+
+    #header h2{
+        font-size: 2rem;
+    }
+
+    #mode{
+        font-size: 1.5rem;
+        left: -220px;
+    }
+    #contrast{
+        font-size: 1.5rem;
+        left: -251px;
+    }
+    #heading{
+        font-size: 2rem;
+        top: -25px;
+    }
+
+    #settingsbutton, #settingsimagedark, #settingsimagelight {
+        width: 45px;
+        height: 45px;
+    }
+
+    #line{
+        top: 147px;
+        width: 395px;
+    }
+
+    #enable, #enablecontrast {
+        width: 120px;
+        font-size: 1.5rem;
+        top: 100px;
+        padding: 4px;
+        left: 55px;
+    }
+
+    #enablecontrast, #contrast{
+        top: 43px;
+    }
+
+    #enablecontrast{
+        top: 60px;
+    }
+
+    #mode{
+        top: 87px;
+    }
+
+    #close {
+        font-size: 2.5rem;
+        right: -20px;
+        top: 5px
+    }
+    
+    #errormessage {
+        width:40%;
+        font-size: 1.1rem;
+    }
+}
